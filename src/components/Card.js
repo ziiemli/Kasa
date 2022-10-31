@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react"
+import { Routes, Route, Link } from 'react-router-dom'
+import Article from '../pages/Article'
 
 const Card = ({location}) => {
+    const urlName = location.title.split(' ').join('_')
+    const url = `article/${urlName}`
     return (
         <article>
-            <a href=""></a>
+            <Link to={url} >
+                <h2>{location.title}</h2>
+            </Link>
+            <Routes>
+                <Route path="/article" element={<Article location={location}/>}></Route>
+            </Routes>
         </article>
-    );
-};
+    )
+}
 
-export default Card;
+export default Card

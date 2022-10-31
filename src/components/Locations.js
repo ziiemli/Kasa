@@ -1,16 +1,20 @@
-import React, { useEffect, useState } from "react"
-import locations from "../datas/logements.json"
-import Card from "./Card"
+import axios from 'axios';
+import React from 'react';
+import { useEffect, useState } from 'react';
+import Card from './Card';
 
 const Locations = () => {
-    // const [locationsData, setLocationsState] = React.useState(locations)
-    // return (
-    //     {
-    //         locationsData.map(({location, id}) => (
-    //             <Card key={id}/>
-    //         ))
-    //     }
-    // )
+    const [locationsData, setLocationsData] = useState([])
+    useEffect(() => {
+        axios.get("./logements.json")
+        .then(res => setLocationsData(res.data))
+    })
+    return (
+        <main>
+            {locationsData.map((location, id) => (
+                <Card key={id} location={location}/>
+            ))}
+        </main>
+    )
 }
-
 export default Locations

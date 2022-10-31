@@ -1,19 +1,23 @@
-import React from 'react';
-import Footer from '../components/Footer';
-import Locations from '../components/Locations';
-import Navigation from '../components/Navigation';
+import React from "react"
+import Footer from "../components/Footer"
+import Locations from "../components/Locations"
+import Header from "../components/Header"
+import home from "../assets/img/home.jpg"
 
 const Home = () => {
     return (
         <div>
-            <header>
-                <Navigation />
-            </header>
-            <h1>Chez vous, partout et ailleurs</h1>
+            <Header />
+            <div className="banner">
+                <div className="home_background">
+                    <h1>Chez vous, partout et ailleurs</h1>
+                    <img src={home} alt="Paysage" />
+                </div>
+            </div>
             <Locations />
             <Footer />
         </div>
-    );
-};
+    )
+}
 
-export default Home;
+export default Home

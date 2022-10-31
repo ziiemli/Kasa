@@ -2,6 +2,8 @@ import React from "react"
 import axios from "axios"
 import {useEffect, useState} from "react"
 import {useNavigate} from "react-router-dom"
+import Footer from "../components/Footer"
+import Header from "../components/Header"
 
 const Article = () => {
     //recover url
@@ -26,7 +28,11 @@ const Article = () => {
     })
     return (
         <div>
-            <h1>{locationData.title}</h1>
+            <Header />
+            <div>
+                <h1>{locationData.title}</h1>
+            </div>
+            <Footer />
         </div>
     )
 }

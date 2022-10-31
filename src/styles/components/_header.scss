@@ -1,0 +1,27 @@
+
+//___HEADER____//
+
+header {
+    width: 100%;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+}
+
+ul li {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.logo {
+    width: auto;
+    height: 47px;
+}

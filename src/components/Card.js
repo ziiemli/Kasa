@@ -9,6 +9,7 @@ const Card = ({location}) => {
         <article>
             <Link to={url} >
                 <h2>{location.title}</h2>
+                <img src={location.cover} alt="" />
             </Link>
             <Routes>
                 <Route path="/article" element={<Article location={location}/>}></Route>

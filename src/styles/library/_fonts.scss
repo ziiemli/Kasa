@@ -9,11 +9,6 @@ $h1: 24px;
 $h2: 18px;
 $p1: 12px;
 
-// @media screen and (min-width: 768px) {
-//     $h1: 30px;
-//     $h2: 20px;
-//     $p1: 10px;  
-// }
 
 nav li {
     font-size: $p1;
@@ -24,7 +19,29 @@ nav li {
 h1 {
     font-size: $h1;
     font-weight: lighter;
+}
+.banner h1 {
     color: white;
+}
+
+//Error_________________________
+.error {
+    color: $primary_color;
+    h1 {
+        font-size: 96px;
+        font-weight: bold;
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .backHome {
+        font-size: 14px;
+        text-decoration: underline;
+    }
+    .backHome:visited {
+        color: $primary_color;
+    }
 }
 
 h2 {

@@ -2,16 +2,25 @@
 
 @import "library/library";
 @import "library/fonts";
+@import "library/fonts_responsive";
 
 @import "components/header";
+@import "components/slideshow";
 @import "components/footer";
 
 @import "pages/home";
+@import "pages/error";
 
 body {
     display: flex;
     justify-content: center;
 }
+
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 
 

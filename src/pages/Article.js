@@ -6,6 +6,8 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 
 import Slider from "../components/Slider"
+import Dropdown from "../components/Dropdown"
+import Stars from "../components/Stars"
 
 const Article = () => {
     //recover url
@@ -34,9 +36,7 @@ const Article = () => {
         <div>
             <Header />
             <main>
-                {/* IMAGES */}
-                <Slider pictures={locationData.pictures}/>
-                {/* GLOBAL INFORMATIONS */}
+                <Slider pictures={locationData.pictures} />
                 <section>
                     <div>
                         <h1>{locationData.title}</h1>
@@ -44,7 +44,7 @@ const Article = () => {
                         {tags && tags.map((tag, index) => <p>{tag}</p>)}
                     </div>
                     <div>
-                        {/* STARS */}
+                        <Stars stars={locationData.rating}/>
                         <figure>
                             <figcaption>{host && host.name}</figcaption>
                             <img src={host && host.picture} alt="" />
@@ -53,8 +53,8 @@ const Article = () => {
                 </section>
                 {/* DETAILS */}
                 <section>
-                    {/* DESCRIPTION */}
-                    {/* EQUIPEMENTS */}
+                    {/* <Dropdown content={locationData.description}/> */}
+                    <Dropdown content={locationData.equipments} />
                 </section>
             </main>
 

@@ -5,16 +5,11 @@
 @import "library/fonts_responsive";
 
 @import "components/header";
-@import "components/slideshow";
+@import "components/slider";
 @import "components/footer";
 
 @import "pages/home";
 @import "pages/error";
-
-body {
-    display: flex;
-    justify-content: center;
-}
 
 main {
     padding-left: 20px;

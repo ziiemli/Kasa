@@ -1,6 +1,5 @@
 import React from "react"
-import { Routes, Route, Link } from 'react-router-dom'
-import Article from '../pages/Article'
+import { Link } from 'react-router-dom'
 
 const Card = ({location}) => {
     const urlName = location.title.split(' ').join('_')

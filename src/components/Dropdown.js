@@ -1,13 +1,25 @@
 import React from "react"
+import {useState} from "react"
 
-const Dropdown = ({content}) => {
+const Dropdown = ({content, title}) => {
+    const [isActive, setIsActive] = useState(false)
     return (
         <div className="dropdown">
-            {content && content.map((info, index) => (
-                <div className="dropdown__content" key={index}>
-                    {info}
-                </div>
-            ))}
+            <button className="dropdown__categorie" onClick={(e) => setIsActive(!isActive)}>
+                {title}
+            </button>
+            {isActive &&
+                (Array.isArray(content) ? (
+                    <ul>
+                        {content.map((info, index) => (
+                            <li className="dropdown__content" key={index}>
+                                {info}
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
+                    <p className="dropdown__content">{content}</p>
+                ))}
         </div>
     )
 }

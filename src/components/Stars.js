@@ -16,10 +16,10 @@ const Stars = ({stars}) => {
     return (
         <div>
             {fullStars.map((rate, index) => (
-                <img src={Star} alt="" />
+                <img src={Star} alt="" key={index}/>
             ))}
             {emptyStars.map((emptyStar, index) => (
-                <img src={Star_Gray} alt="" />
+                <img src={Star_Gray} alt="" key={index}/>
             ))}
         </div>
     )

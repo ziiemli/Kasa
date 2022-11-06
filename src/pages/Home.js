@@ -2,7 +2,7 @@ import React from "react"
 import Footer from "../components/Footer"
 import Locations from "../components/Locations"
 import Header from "../components/Header"
-import home from "../assets/img/home.jpg"
+import home from "../assets/img/home.jpg" 
 
 const Home = () => {
     return (

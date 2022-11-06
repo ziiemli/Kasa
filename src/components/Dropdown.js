@@ -1,12 +1,16 @@
 import React from "react"
 import {useState} from "react"
+import topArrow from "../assets/logo/topArrow.svg"
+import bottomArrow from "../assets/logo/bottomArrow.svg"
 
 const Dropdown = ({content, title}) => {
     const [isActive, setIsActive] = useState(false)
     return (
         <div className="dropdown">
-            <button className="dropdown__categorie" onClick={(e) => setIsActive(!isActive)}>
-                {title}
+            <button className="dropdown__button" onClick={(e) => setIsActive(!isActive)}>
+                {title} 
+                {isActive && (<img className="dropdown__button__arrow" src={topArrow} alt="flèche tournée vers le haut" />)}
+                {!isActive && (<img className="dropdown__button__arrow" src={bottomArrow} alt="flèche tournée vers le bas" />)}
             </button>
             {isActive &&
                 (Array.isArray(content) ? (

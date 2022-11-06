@@ -10,13 +10,19 @@
 @import "components/footer";
 
 @import "pages/home";
+@import "pages/about";
 @import "pages/error";
 
 main {
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
+@media screen and (min-width: 768px) {
 
+    main {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
 
-
+}

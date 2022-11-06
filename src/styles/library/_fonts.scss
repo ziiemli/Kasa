@@ -9,6 +9,12 @@ $h1: 24px;
 $h2: 18px;
 $p1: 12px;
 
+@media screen and (min-width: 768px) {
+
+    $p1: 24px; 
+    $h2: 19px;
+    
+}
 
 nav li {
     font-size: $p1;
@@ -20,8 +26,25 @@ h1 {
     font-size: $h1;
     font-weight: lighter;
 }
+
+h2 {
+    font-size: $h2;
+    font-weight: lighter;
+    color: white;
+}
+
 .banner h1 {
     color: white;
+}
+
+//Dropdown_________________________
+.dropdown {
+    color: $primary_color;
+    font-size: $p1;
+    button {
+        color: white;
+        font-size: 13px;
+    }
 }
 
 //Error_________________________
@@ -44,12 +67,9 @@ h1 {
     }
 }
 
-h2 {
-    font-size: $h2;
-    font-weight: lighter;
-    color: white;
-}
 
+//Footer_________________________
 footer p {
+    font-size: $p1;
     color: white;
 }

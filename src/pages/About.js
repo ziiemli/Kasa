@@ -13,16 +13,18 @@ const About = () => {
         "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
     return (
         <div>
-            <Header />
-            <div className="bannerAbout">
-                <img src={about} alt="Paysage" />
+            <div className="content">
+                <Header />
+                <div className="bannerAbout">
+                    <img src={about} alt="Paysage" />
+                </div>
+                <main className="dropdownAbout">
+                    <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Fiabilité" content={reliability} />
+                    <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Respect" content={respect} />
+                    <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Service" content={service} />
+                    <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Sécurity" content={security} />
+                </main>
             </div>
-            <main className="dropdownAbout">
-                <Dropdown title="Fiabilité" content={reliability} />
-                <Dropdown title="Respect" content={respect} />
-                <Dropdown title="Service" content={service} />
-                <Dropdown title="Sécurity" content={security} />
-            </main>
             <Footer />
         </div>
     )

@@ -14,7 +14,7 @@ const Stars = ({stars}) => {
     const emptyStars = starsTable.splice(0, emptyStarsNumber)
 
     return (
-        <div>
+        <div className="content__info2__stars">
             {fullStars.map((rate, index) => (
                 <img src={Star} alt="" key={index}/>
             ))}

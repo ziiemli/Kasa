@@ -2,9 +2,11 @@ import React from "react"
 
 const Tags = ({tags}) => {
     return (
-        <div>
+        <div className="tags">
             {tags && tags.map((tag, index) => (
-                <span key={index}>{tag}</span>
+                <div className="tags__content" key={index}>
+                    <span>{tag}</span>
+                </div>
             ))}
         </div>
     )

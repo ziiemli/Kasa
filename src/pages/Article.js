@@ -14,7 +14,7 @@ const Article = () => {
     //recover url
     const querystring = window.location.pathname.split("/article/").join("")
     //recover title name
-    const articleName = querystring.split("_").join(" ")
+    const articleId = querystring.split("_")[0]
 
     const [locationData, setLocationData] = useState([])
     const navigate = useNavigate()
@@ -23,7 +23,7 @@ const Article = () => {
             //recover data
             const res = await axios.get("../logements.json")
             //find the right data
-            const locationData = await res.data.find((el) => el.title === articleName)
+            const locationData = await res.data.find((el) => el.id === articleId)
             setLocationData(locationData)
         }
         getData()
@@ -33,33 +33,40 @@ const Article = () => {
     })
     const tags = locationData.tags
     const host = locationData.host
+    let lastName = host && host.name.split(" ").pop()
+    let firstName = host && host.name.split(" ").shift()
 
     return (
         <div>
-            <Header />
-            <main>
-                <Slider pictures={locationData.pictures} />
-                <section>
-                    <div>
-                        <h1>{locationData.title}</h1>
-                        <p>{locationData.location}</p>
-                        <Tags tags={tags}/>
-                    </div>
-                    <div>
-                        <Stars stars={locationData.rating}/>
-                        <figure>
-                            <figcaption>{host && host.name}</figcaption>
-                            <img src={host && host.picture} alt="" />
-                        </figure>
-                    </div>
-                </section>
-                {/* DETAILS */}
-                <section>
-                    <Dropdown title="Description" content={locationData.description}/>
-                    <Dropdown title="Équipements" content={locationData.equipments} />
-                </section>
-            </main>
-
+            <div className="content article">
+                <Header />
+                <main>
+                    <Slider pictures={locationData.pictures} />
+                    <section className="article__informations">
+                        <div>
+                            <h1>{locationData.title}</h1>
+                            <p className="article__location">{locationData.location}</p>
+                            <Tags tags={tags} />
+                        </div>
+                        <div className="article__info2">
+                            <Stars stars={locationData.rating} />
+                            <figure>
+                                <figcaption>
+                                    <p>{firstName}</p>
+                                    <p>{lastName}</p>   
+                                </figcaption>
+                                <img src={host && host.picture} alt="" />
+                            </figure>
+                        </div>
+                    </section>
+                    {/* DETAILS */}
+                    <section className="article__details">
+                        <Dropdown classDP="dropdownArticle__button" classP="dropdownArticle__p" title="Description" content={locationData.description} />
+                        <div className="article__details__space"></div>
+                        <Dropdown classDP="dropdownArticle__button" classP="dropdownArticle__p" title="Équipements" content={locationData.equipments} />
+                    </section>
+                </main>
+            </div>
             <Footer />
         </div>
     )

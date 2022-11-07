@@ -1,7 +1,7 @@
 //___HOME____//
 
 .banner {
-    padding: 0px 20px 22px 20px;
+    padding-bottom: 22px;
 }
 
 .home_background {
@@ -17,6 +17,7 @@
         filter: brightness(60%);
     }
     h1 {
+        width: 70%;
         left: 17px;
         top: 34px;
         position: absolute;
@@ -52,8 +53,6 @@
 @media screen and (min-width: 768px) {
 
 .banner {
-    margin-left: 100px;
-    margin-right: 100px;
     padding: 0px 0px 43px 0;
 }
 
@@ -62,6 +61,11 @@
     img {
         height: 100%;
         border-radius: 25px;
+    }
+    h1 {
+        width: 75%;
+        left: 22.18%;
+        top: 80px;
     }
 }
 
@@ -91,11 +95,18 @@
 
 @media screen and (min-width: 996px) {
 
-    .locations__container {
-        justify-content: space-between;
-        article {
-            width: 30%;
-        }
+.locations__container {
+    justify-content: space-between;
+    article {
+        width: 30%;
     }
+}
+
+.home_background {
+    h1 {
+        width: 80%;
+        top: 93px;
+    }
+}
 
 }

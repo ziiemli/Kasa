@@ -20,9 +20,30 @@
 }
 
 .dropdown {
+    width: 100%;
     margin-bottom: 20px;
+    &__content {
+        border-radius: 0 0 5px 5px;
+    }
     p {
         background-color: $secondary-color;
-        padding: 20px;
     }
+}
+
+
+//___DROPDOWN RESPONSIVE____//
+
+@media screen and (min-width: 768px) {
+
+.dropdown {
+    margin-bottom: 31px;
+}
+
+.dropdown__button {
+    padding-right: 33px;
+    &__arrow {
+        height: 20px;
+    }
+}
+
 }

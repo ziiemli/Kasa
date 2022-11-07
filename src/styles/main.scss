@@ -6,23 +6,24 @@
 
 @import "components/header";
 @import "components/slider";
+@import "components/tags";
+@import "components/stars";
 @import "components/dropdown";
 @import "components/footer";
 
 @import "pages/home";
+@import "pages/article";
 @import "pages/about";
 @import "pages/error";
 
-main {
+.content {
     margin-left: 20px;
     margin-right: 20px;
 }
 
 @media screen and (min-width: 768px) {
-
-    main {
+    .content {
         margin-left: 100px;
         margin-right: 100px;
     }
-
 }

@@ -3,7 +3,7 @@ import {useState} from "react"
 import leftArrow from "../assets/logo/leftArrow.svg"
 import rightArrow from "../assets/logo/rightArrow.svg"
 
-const Slider = ({pictures}) => {
+const Slider = ({pictures, title}) => {
     const [current, setCurrent] = useState(0)
     const picturesLength = pictures && pictures.length
 
@@ -17,11 +17,11 @@ const Slider = ({pictures}) => {
 
     return (
         <section className="slider">
-            <img className="leftArrow" src={leftArrow} alt="" onClick={prevSlide} />
-            <img className="rightArrow" src={rightArrow} alt="" onClick={nextSlide} />
+            {picturesLength > 1 && (<img className="leftArrow" src={leftArrow} alt="Flèche en direction de la gauche" onClick={prevSlide} />)}
+            {picturesLength > 1 && (<img className="rightArrow" src={rightArrow} alt="Flèche en direction de la droite" onClick={nextSlide} />)}
             {pictures && pictures.map((picture, index) => 
                 <div className={index === current ? "slide_active" : "slide"} key={index}>
-                   { index === current && <img src={picture} alt="" />} 
+                   { index === current && <img src={picture} alt={"image " + title} />} 
                 </div>    
             )}
             

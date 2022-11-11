@@ -4,7 +4,6 @@ import {useEffect, useState} from "react"
 import {useNavigate} from "react-router-dom"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-
 import Slider from "../components/Slider"
 import Dropdown from "../components/Dropdown"
 import Stars from "../components/Stars"
@@ -41,7 +40,7 @@ const Article = () => {
             <div className="content article">
                 <Header />
                 <main>
-                    <Slider pictures={locationData.pictures} />
+                    <Slider pictures={locationData.pictures} title={locationData.title}/>
                     <section className="article__informations">
                         <div>
                             <h1>{locationData.title}</h1>
@@ -55,11 +54,10 @@ const Article = () => {
                                     <p>{firstName}</p>
                                     <p>{lastName}</p>   
                                 </figcaption>
-                                <img src={host && host.picture} alt="" />
+                                <img src={host && host.picture} alt={host && "Photo de " + host.name} />
                             </figure>
                         </div>
                     </section>
-                    {/* DETAILS */}
                     <section className="article__details">
                         <Dropdown classDP="dropdownArticle__button" classP="dropdownArticle__p" title="Description" content={locationData.description} />
                         <div className="article__details__space"></div>

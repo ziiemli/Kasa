@@ -12,7 +12,7 @@ const Home = () => {
                 <div className="banner">
                     <div className="home_background">
                         <h1>Chez vous, partout et ailleurs</h1>
-                        <img src={home} alt="Paysage" />
+                        <img src={home} alt="Paysage de rochers avec des arbres à côté de la mer" />
                     </div>
                 </div>
                 <Locations />

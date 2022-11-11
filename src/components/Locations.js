@@ -6,7 +6,12 @@ import Card from "./Card"
 const Locations = () => {
     const [locationsData, setLocationsData] = useState([])
     useEffect(() => {
-        axios.get("./logements.json").then((res) => setLocationsData(res.data))
+        axios
+            .get("./logements.json")
+            .then((res) => setLocationsData(res.data))
+            .catch((error) => {
+                console.log(error)
+            })
     })
     return (
         <main className="locations">

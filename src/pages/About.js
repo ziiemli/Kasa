@@ -1,7 +1,7 @@
 import React from "react"
+import about from "../assets/img/about.jpg"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
-import about from "../assets/img/about.jpg"
 import Dropdown from "../components/Dropdown"
 
 const About = () => {
@@ -16,7 +16,7 @@ const About = () => {
             <div className="content">
                 <Header />
                 <div className="bannerAbout">
-                    <img src={about} alt="Paysage" />
+                    <img src={about} alt="Paysage montagneux" />
                 </div>
                 <main className="dropdownAbout">
                     <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Fiabilité" content={reliability} />

@@ -1,7 +1,6 @@
-
 //___FONTS____//
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 //Variables_________________________
@@ -34,7 +33,7 @@ h2 {
 
 //Home_________________________
 .banner h1 {
-    font-size: var(--h1);   
+    font-size: var(--h1);
     font-weight: 400;
     color: white;
 }
@@ -50,7 +49,7 @@ h2 {
         font-size: var(--p1_article_location);
         color: $primary_color;
     }
-    
+
     &__info2 {
         figcaption {
             font-size: var(--p2_profile);
@@ -78,7 +77,6 @@ h2 {
 .dropdownArticle__p {
     font-size: var(--dropdownArticle_content);
 }
-
 
 //Tags_________________________
 .tags {
@@ -120,7 +118,6 @@ h2 {
         color: $primary_color;
     }
 }
-
 
 //Footer_________________________
 footer p {

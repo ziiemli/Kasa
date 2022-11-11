@@ -1,4 +1,3 @@
-
 //___ABOUT___//
 
 .bannerAbout {
@@ -15,7 +14,7 @@
 }
 
 .dropdownAbout {
-    margin-bottom: 80px;
+    margin-bottom: 220px;
 }
 
 .dropdownAbout__button {
@@ -29,7 +28,6 @@
 //___ABOUT RESPONSIVE___//
 
 @media screen and (min-width: 768px) {
-
     .bannerAbout {
         padding-bottom: 31px;
     }
@@ -55,4 +53,3 @@
         padding-right: 108px;
     }
 }
-

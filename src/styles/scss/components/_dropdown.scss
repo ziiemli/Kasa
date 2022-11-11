@@ -1,5 +1,8 @@
-
 //___DROPDOWN____//
+
+.article__details {
+    margin-bottom: 100px;
+}
 
 .dropdown__button {
     width: 100%;
@@ -8,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     border: none;
-    border-radius: 5px; 
+    border-radius: 5px;
     background-color: $primary_color;
     cursor: pointer;
     padding-left: 19px;
@@ -26,24 +29,25 @@
         border-radius: 0 0 5px 5px;
     }
     p {
+        height: 100%;
         background-color: $secondary-color;
     }
+    ul {
+        height: 100%;
+    }
 }
-
 
 //___DROPDOWN RESPONSIVE____//
 
 @media screen and (min-width: 768px) {
-
-.dropdown {
-    margin-bottom: 31px;
-}
-
-.dropdown__button {
-    padding-right: 33px;
-    &__arrow {
-        height: 20px;
+    .dropdown {
+        margin-bottom: 31px;
     }
-}
 
+    .dropdown__button {
+        padding-right: 33px;
+        &__arrow {
+            height: 20px;
+        }
+    }
 }

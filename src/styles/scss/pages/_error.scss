@@ -1,4 +1,3 @@
-
 //___ERROR____//
 
 .error {
@@ -7,7 +6,7 @@
     align-items: center;
     text-align: center;
     h1 {
-        margin:  212px 0px 32px 0;
+        margin: 212px 0px 32px 0;
     }
     .backHome {
         width: 260px;
@@ -17,11 +16,9 @@
 
 //___ERROR RESPONSIVE____//
 @media screen and (min-width: 768px) {
-
-.error {
-    .backHome {
-        width: 100%;
+    .error {
+        .backHome {
+            width: 100%;
+        }
     }
-}
-
 }

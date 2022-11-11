@@ -3,14 +3,16 @@ import Star from "../assets/logo/Star.svg"
 import Star_Gray from "../assets/logo/Star_Gray.svg"
 
 const Stars = ({stars}) => {
-
+    //rating stars
     const starsNumber = stars && JSON.parse(stars)
+    //create table to display stars images
     const starsString = "star ".repeat(5)
     let starsTable = starsString.split(" ")
     starsTable.pop()
+    //find empty Stars number
     const emptyStarsNumber = 5 - starsNumber
-    const fullStarsNumber = 5 - emptyStarsNumber
-    const fullStars = starsTable.splice(0, fullStarsNumber)
+    //tables of stars
+    const fullStars = starsTable.splice(0, starsNumber)
     const emptyStars = starsTable.splice(0, emptyStarsNumber)
 
     return (

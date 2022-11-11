@@ -51,62 +51,58 @@
 //___HOME RESPONSIVE____//
 
 @media screen and (min-width: 768px) {
-
-.banner {
-    padding: 0px 0px 43px 0;
-}
-
-.home_background {
-    height: 223px;
-    img {
-        height: 100%;
-        border-radius: 25px;
+    .banner {
+        padding: 0px 0px 43px 0;
     }
-    h1 {
-        width: 75%;
-        left: 22.18%;
-        top: 80px;
-    }
-}
 
-.locations {
-    flex-wrap: wrap;
-    background-color: $secondary-color;
-    border-radius: 25px;
-    &__container {
-        display: flex;
-        align-items: center;
+    .home_background {
+        height: 223px;
+        img {
+            height: 100%;
+            border-radius: 25px;
+        }
+        h1 {
+            width: 75%;
+            left: 22.18%;
+            top: 80px;
+        }
+    }
+
+    .locations {
         flex-wrap: wrap;
-        justify-content: space-around;
-        padding: 50px 56px 50px 56px;
-        article {
-            width: 340px;
-            height: 340px;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            h2 {
-                top: 273px;
+        background-color: $secondary-color;
+        border-radius: 25px;
+        &__container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 56px 50px 56px;
+            article {
+                width: 340px;
+                height: 340px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                h2 {
+                    top: 273px;
+                }
             }
         }
     }
 }
 
-}
-
 @media screen and (min-width: 996px) {
-
-.locations__container {
-    justify-content: space-between;
-    article {
-        width: 30%;
+    .locations__container {
+        justify-content: space-between;
+        article {
+            width: 30%;
+        }
     }
-}
 
-.home_background {
-    h1 {
-        width: 80%;
-        top: 93px;
+    .home_background {
+        h1 {
+            width: 80%;
+            top: 93px;
+        }
     }
-}
-
 }

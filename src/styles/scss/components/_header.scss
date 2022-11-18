@@ -15,9 +15,13 @@ header {
     }
     ul {
         display: flex;
+        :hover {
+            text-decoration: underline;
+        }
         li {
             margin-top: 10px;
             margin-left: 15px;
+        
         }
     }
 }

@@ -22,7 +22,7 @@ const About = () => {
                     <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Fiabilité" content={reliability} />
                     <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Respect" content={respect} />
                     <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Service" content={service} />
-                    <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Sécurity" content={security} />
+                    <Dropdown classDP="dropdownAbout__button" classP="dropdownAbout__p" title="Sécurité" content={security} />
                 </main>
             </div>
             <Footer />

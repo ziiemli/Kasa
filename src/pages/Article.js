@@ -12,9 +12,14 @@ import Tags from "../components/Tags"
 const Article = () => {
     //recover url
     const querystring = window.location.pathname.split("/article/").join("")
-    //recover title name
+    //recover id
     const articleId = querystring.split("_")[0]
+    //recover name
+    const articleNameRecover = querystring.split("_")
+    articleNameRecover.shift()
+    const articleName = articleNameRecover.join("_")
 
+    //recover data
     const [locationData, setLocationData] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
@@ -24,12 +29,30 @@ const Article = () => {
             //find the right data
             const locationData = await res.data.find((el) => el.id === articleId)
             setLocationData(locationData)
+            //if data undefined
+            if (!locationData) {
+                navigate("/error")
+            }
+
+            //recover title in the title replacement of spaces by _ 
+            const nameData = locationData.title.split(' ').join('_')
+            //delete accent in the title
+            const nameDataNoAccents = nameData && nameData.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+            
+            //informations of url of website
+            const urlOfWebsite = articleId +  "_" + articleName
+            //informations of url with data recover 
+            const urlWithDataRecover = locationData.id + "_" + nameDataNoAccents
+            
+            //if informations don't match, return error page
+            if (urlOfWebsite !== urlWithDataRecover) {
+                navigate("/error")
+            }
         }
         getData()
-        if (!locationData) {
-            navigate("/error")
-        }
+
     })
+   
     const tags = locationData.tags
     const host = locationData.host
     let lastName = host && host.name.split(" ").pop()
